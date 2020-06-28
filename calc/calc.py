@@ -1,4 +1,4 @@
-          
+
 from cgi import parse_qs
 from template import html
 
@@ -7,8 +7,7 @@ def application(environ, start_response):
        first_num = d.get('first_num', [''])[0]
        second_num = d.get('second_num', [''])[0]
        sum, mul = 0, 0
-          
-       if '' not in [first_num, second_num]:
+       try:
                first_num, second_num = int(first_num), int(second_num)
                sum = first_num + second_num
                mul = first_num * second_num
@@ -21,3 +20,5 @@ except ValueError:
               ('Content-Length', str(len(response_body)))
        ])
        return [response_body] 
+
+
