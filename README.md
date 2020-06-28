@@ -1,1 +1,2 @@
-20203141 정현서
+20203141 Chung Hyunseo
+Kookmin Univ. SW
